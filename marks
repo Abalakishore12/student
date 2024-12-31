@@ -1,0 +1,63 @@
+class Student { 
+private int rollNo; 
+// Getter method for rollNo 
+public int getRollNo() { 
+return rollNo; 
+} 
+// Setter method for rollNo 
+public void setRollNo(int rollNo) { 
+this.rollNo = rollNo; 
+} 
+} 
+// Class Test derived from Student 
+class Test extends Student { 
+private int marks1; 
+private int marks2; 
+// Getter method for marks1 
+public int getMarks1() { 
+return marks1; 
+} 
+// Setter method for marks1 
+public void setMarks1(int marks1) { 
+this.marks1 = marks1; 
+} 
+// Getter method for marks2 
+public int getMarks2() { 
+return marks2; 
+} 
+// Setter method for marks2 
+public void setMarks2(int marks2) { 
+this.marks2 = marks2; 
+} 
+} 
+// Class Result derived from Test 
+class Result extends Test { 
+private int total; 
+// Method to calculate total marks 
+public void calculateTotal() { 
+total = getMarks1() + getMarks2(); 
+} 
+// Method to display all members 
+public void display() { 
+System.out.println("Roll No: " + getRollNo()); 
+System.out.println("Marks 1: " + getMarks1()); 
+System.out.println("Marks 2: " + getMarks2()); 
+System.out.println("Total: " + total); 
+} 
+} 
+// Main class 
+public class Main { 
+public static void main(String[] args) { 
+// Create an object of Result class 
+Result studentResult = new Result(); 
+// Set roll no 
+studentResult.setRollNo(101); 
+// Set marks 
+studentResult.setMarks1(85); 
+studentResult.setMarks2(90); 
+// Calculate total marks 
+studentResult.calculateTotal(); 
+// Display all members 
+studentResult.display(); 
+} 
+} 
